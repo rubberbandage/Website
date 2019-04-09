@@ -16,9 +16,6 @@ import {
 } from 'semantic-ui-react'
 
 /* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
 const HomepageHeading = ({ mobile }) => (
   <Container text>
   <div className="col-12 centered" id="profile">
