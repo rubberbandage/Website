@@ -4,7 +4,7 @@ import { TwitterIcon } from './Twitter'
 import { GithubIcon } from './Github'
 import { InstagramIcon } from './Instagram'
 import { RedditIcon } from './Reddit'
-import { KeybaseIcon } from './Keybase'
+// import { KeybaseIcon } from './Keybase'
 
 export default class SocialMedia extends Component {
   render() {
@@ -24,7 +24,7 @@ export class SocialMediaIcons extends Component {
         <GithubIcon/>
       	<InstagramIcon/>
         <RedditIcon/>
-        <KeybaseIcon/>
+        {/* <KeybaseIcon/> */}
   		</div>
     );
   }
