@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            apt-get install ncftp -y
+            sudo apt-get install ncftp -y
             ncftpput -zR -u $FTP_USERNAME -p$FTP_PASSWORD $FTP_URL $FTP_DIRECTORY build/*
 
 workflows:
