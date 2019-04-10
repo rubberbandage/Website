@@ -28,8 +28,6 @@ workflows:
   build-and-deploy:
     jobs:
       - build:
-          requires:
-            - build
           filters:
             branches:
               only: master 
