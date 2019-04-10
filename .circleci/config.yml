@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: circleci/node:8.15
     working_directory: ~/repo
-    parallelism: 2
     steps:
       - checkout
       - restore_cache:
@@ -18,26 +17,27 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build
+#  deploy:
+#    machine:
+#      enabled: true
+#    steps:
+#      - add_ssh_keys:
+#          fingerprints:
+#            - $SSH_FINGERPRINT
+#      - run: ls
       - run:
           name: Deploy
           command: |
             sudo apt-get install ncftp -y
             ncftpput -zR -u $FTP_USERNAME -p$FTP_PASSWORD $FTP_URL $FTP_DIRECTORY build/*
-#   deploy:
-#     machine:
-#       enabled: true
-#     steps:
-#      - run: ls
-#      - run: echo "Done"
-
-# workflows:
-#   version: 2
-#   build-and-deploy:
-#     jobs:
-#       - build
-#       - deploy:
-#           requires:
-#             - build
-#           filters:
-#             branches:
-#               only: master 
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+#          requires:
+#            - build
+          filters:
+            branches:
+              only: master 
