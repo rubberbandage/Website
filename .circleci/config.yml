@@ -27,6 +27,7 @@ jobs:
       enabled: true
     steps:
      - run: ls
+     - run: echo "Done"
 
 workflows:
   version: 2
