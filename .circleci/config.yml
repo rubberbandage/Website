@@ -30,10 +30,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: ls
-#      - run: 
-# #         name: Build
-#	  command: yarn build
-
+      - run: yarn build
 #      - store_artifacts:
 #	  path: /build
 
