@@ -22,21 +22,21 @@ jobs:
           command: |
             sudo apt-get install ncftp -y
             ncftpput -zR -u $FTP_USERNAME -p$FTP_PASSWORD $FTP_URL $FTP_DIRECTORY build/*
-  deploy:
-    machine:
-      enabled: true
-    steps:
-     - run: ls
-     - run: echo "Done"
+#   deploy:
+#     machine:
+#       enabled: true
+#     steps:
+#      - run: ls
+#      - run: echo "Done"
 
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master 
+# workflows:
+#   version: 2
+#   build-and-deploy:
+#     jobs:
+#       - build
+#       - deploy:
+#           requires:
+#             - build
+#           filters:
+#             branches:
+#               only: master 
