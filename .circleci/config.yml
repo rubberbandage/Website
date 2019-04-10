@@ -17,19 +17,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build
-#  deploy:
-#    machine:
-#      enabled: true
-#    steps:
-#      - add_ssh_keys:
-#          fingerprints:
-#            - $SSH_FINGERPRINT
-#      - run: ls
-      - run:
-          name: Deploy
-          command: |
-            sudo apt-get install ncftp -y
-            ncftpput -zR -u $FTP_USERNAME -p$FTP_PASSWORD $FTP_URL $FTP_DIRECTORY build/*
+  deploy:
+    machine:
+      enabled: true
+    steps:
+     - run: ls
 
 workflows:
   version: 2
@@ -41,9 +33,9 @@ workflows:
           filters:
             branches:
               only: master 
-      # - deploy:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: master 
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master 
