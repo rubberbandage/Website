@@ -32,6 +32,4 @@ jobs:
       - run: mkdir build
       - run: yarn build
       - run: ls
-      - store_artifacts:
-	  path: build
 
