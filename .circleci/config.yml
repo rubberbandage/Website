@@ -29,9 +29,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: 
-          name: Build
-	  command: yarn build
+      - run: ls
+#      - run: 
+ #         name: Build
+#	  command: yarn build
 
       - store_artifacts:
 	  path: /build
