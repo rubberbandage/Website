@@ -31,9 +31,9 @@ jobs:
 
       - run: ls
 #      - run: 
- #         name: Build
+# #         name: Build
 #	  command: yarn build
 
-      - store_artifacts:
-	  path: /build
+#      - store_artifacts:
+#	  path: /build
 
