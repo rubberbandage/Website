@@ -17,14 +17,14 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build
-  deploy:
-    machine:
-      enabled: true
-    steps:
+#  deploy:
+#    machine:
+#      enabled: true
+#    steps:
 #      - add_ssh_keys:
 #          fingerprints:
 #            - $SSH_FINGERPRINT
-      - run: ls
+#      - run: ls
       - run:
           name: Deploy
           command: |
@@ -37,8 +37,8 @@ workflows:
     jobs:
       - build
       - deploy:
-          requires:
-            - build
+#          requires:
+#            - build
           filters:
             branches:
               only: master 
