@@ -10,8 +10,8 @@ export default class SocialMedia extends Component {
   render() {
     return (
     	<div>
-  		</div>
-    );
+      </div>
+      );
   }
 }
 
@@ -19,13 +19,13 @@ export class SocialMediaIcons extends Component {
   render() {
     return (
     	<div>
-        <LinkedInIcon/>
-    		<TwitterIcon/>
-        <GithubIcon/>
-      	<InstagramIcon/>
-        <RedditIcon/>
-        {/* <KeybaseIcon/> */}
-  		</div>
+      <LinkedInIcon/>
+      <TwitterIcon/>
+      <GithubIcon/>
+      <InstagramIcon/>
+      <RedditIcon/>
+    {/* <KeybaseIcon/> */}
+    </div>
     );
   }
 }

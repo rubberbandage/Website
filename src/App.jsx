@@ -49,7 +49,7 @@ const HomepageHeading = ({ mobile }) => (
     <p style={{ fontSize: mobile ? '1em' : '1.33em', marginTop: mobile ? '0.5em' : '1.5em'}}>
       I have a love of technology and a love of theatre, and with investing so much of my time into both, 
       I've lost count of the number of weeks & months I have spent learning, growing and teaching others.
-      I am constantly on the lookout for new opportunties, whether or not I have the experience at the time. 
+      I am constantly on the lookout for new opportunities, whether or not I have the experience at the time. 
     </p>
     <p style={{ fontSize: '0.7em', marginTop: mobile ? '0.5em' : '1.5em'}}>
       More details upon request
