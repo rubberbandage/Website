@@ -4,6 +4,12 @@ const volunteerExperienceData = [{
     title: 'Ipswich Musical Theatre Company',
     shows: [
         {
+            title: "MAMMA MIA!",
+            role: "Stage Manager",
+            location: "Ipswich Civic Centre, Ipswich, Queensland",
+            season: "13 September - 22 September, 2019"
+        },
+        {
             title: "LADIES IN BLACK",
             role: "Stage Manager",
             location: "The Old Courthouse, Ipswich, Queensland",
